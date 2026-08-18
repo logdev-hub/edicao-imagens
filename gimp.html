@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tutorial prático de GIMP com 10 desafios para criar posts de e-commerce.">
+  <title>Tutorial GIMP | IA no E-commerce</title>
+  <script>document.documentElement.dataset.theme=localStorage.getItem('ia-ecommerce-theme')||'light';</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav" aria-label="Navegação principal">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" data-page="index.html"><span class="brand-mark">🪄</span> IA no E-commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="fundamentos.html" data-page="fundamentos.html">Fundamentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="prompts.html" data-page="prompts.html">Prompts</a></li>
+          <li class="nav-item"><a class="nav-link" href="desafios.html" data-page="desafios.html">Desafios</a></li>
+          <li class="nav-item"><a class="nav-link" href="especificacoes.html" data-page="especificacoes.html">Especificações</a></li>
+          <li class="nav-item"><a class="nav-link" href="gimp.html" data-page="gimp.html">🖌️ GIMP</a></li>
+        </ul>
+        <button class="theme-toggle ms-lg-3" type="button" data-theme-toggle aria-label="Ativar tema escuro">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="conteudo">
+    <header class="page-header">
+      <div class="container"><span class="eyebrow">🖌️ Do leigo ao profissional</span><h1>Tutorial GIMP: 10 desafios para posts de e-commerce</h1><p>Use imagens gratuitas para criar peças de oferta e lançamento que convidam o público a acessar a loja. Os comandos aparecem em inglês, como na interface configurada para a aula.</p></div>
+    </header>
+
+    <!-- Preparação da atividade -->
+    <section class="section" aria-labelledby="antes-title">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">⚙️ Preparação</span><h2 id="antes-title">Antes de começar</h2><p>Organize o ambiente uma vez para trabalhar com mais segurança durante os dez desafios.</p></div>
+        <div class="row g-4">
+          <div class="col-lg-7"><article class="content-card"><ol class="setup-list">
+            <li>Baixe o GIMP gratuitamente em <a href="https://www.gimp.org/downloads/" target="_blank" rel="noopener noreferrer">gimp.org <span aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>.</li>
+            <li>Abra <code>Edit &gt; Preferences &gt; Interface</code> e confirme o idioma <strong>English</strong>, para os comandos coincidirem com o tutorial.</li>
+            <li>Crie a pasta <code>loja-fictícia/posts/</code> e, dentro dela, as subpastas <code>imagens-base/</code>, <code>fontes/</code> e <code>exportado/</code>.</li>
+            <li>Anote a paleta da marca. Exemplo Urbana Eco Store: verde-musgo <code>#4A5D45</code>, bege <code>#EFE7DA</code> e laranja queimado <code>#C0653B</code>. Adapte para sua loja fictícia.</li>
+          </ol></article></div>
+          <div class="col-lg-5"><aside class="content-card"><span class="emoji">💡</span><h3>Como instalar uma fonte</h3><ol class="mini-steps"><li>Baixe o arquivo <code>.ttf</code> ou <code>.otf</code> no Google Fonts.</li><li>No Windows, clique com o botão direito e escolha <strong>Install</strong>; no Mac, use o Font Book; no Linux, copie para <code>~/.local/share/fonts/</code>.</li><li>No GIMP, use <code>Filters &gt; Script-Fu &gt; Refresh Scripts</code> ou reabra o programa.</li></ol></aside></div>
+        </div>
+
+        <div class="section-heading mt-5"><h2>🔤 Fontes recomendadas</h2><p>Todas são gratuitas e podem ser baixadas no Google Fonts.</p></div>
+        <div class="table-responsive table-wrap"><table class="table spec-table"><caption class="visually-hidden">Fontes recomendadas para os desafios no GIMP</caption><thead><tr><th scope="col">Uso</th><th scope="col">Fonte</th><th scope="col">Download</th></tr></thead><tbody>
+          <tr><td>💥 Título de impacto / oferta</td><td><strong>Bebas Neue</strong></td><td><a href="https://fonts.google.com/specimen/Bebas+Neue" target="_blank" rel="noopener noreferrer">Abrir Google Fonts ↗</a></td></tr>
+          <tr><td>📝 Texto de apoio / legenda</td><td><strong>Poppins</strong></td><td><a href="https://fonts.google.com/specimen/Poppins" target="_blank" rel="noopener noreferrer">Abrir Google Fonts ↗</a></td></tr>
+          <tr><td>✨ Elegante / premium</td><td><strong>Playfair Display</strong></td><td><a href="https://fonts.google.com/specimen/Playfair+Display" target="_blank" rel="noopener noreferrer">Abrir Google Fonts ↗</a></td></tr>
+          <tr><td>📐 Moderna / neutra</td><td><strong>Montserrat</strong></td><td><a href="https://fonts.google.com/specimen/Montserrat" target="_blank" rel="noopener noreferrer">Abrir Google Fonts ↗</a></td></tr>
+          <tr><td>😊 Amigável / arredondada</td><td><strong>Nunito</strong></td><td><a href="https://fonts.google.com/specimen/Nunito" target="_blank" rel="noopener noreferrer">Abrir Google Fonts ↗</a></td></tr>
+        </tbody></table></div>
+        <div class="notice mt-4"><strong>🖼️ Sobre as imagens:</strong> os links de cada desafio levam às buscas ou fotos indicadas no tutorial. No Pexels, use “Free Download”; no Pixabay, “Download”. Registre a origem do arquivo escolhido.</div>
+      </div>
+    </section>
+
+    <!-- Nível iniciante: desafios 1 a 3 -->
+    <section class="section section-soft level-section" id="iniciante" aria-labelledby="iniciante-title">
+      <div class="container">
+        <div class="section-heading"><span class="level-badge level-beginner">🟢 Iniciante</span><h2 id="iniciante-title">🧰 Ferramentas básicas — Desafios 1 a 3</h2><p>Comece pelo enquadramento, conheça os tamanhos dos canais e finalize seu primeiro post com texto.</p></div>
+        <div class="accordion gimp-accordion" id="accordionBeginner">
+          <article class="accordion-item">
+            <h3 class="accordion-header" id="heading01"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#challenge01" aria-expanded="true" aria-controls="challenge01"><span><span class="level-badge level-beginner">🟢 Iniciante</span><strong>Desafio 1 — Enquadrar uma foto de produto para post quadrado</strong></span></button></h3>
+            <div id="challenge01" class="accordion-collapse collapse show" aria-labelledby="heading01" data-bs-parent="#accordionBeginner"><div class="accordion-body">
+              <p><strong>🎯 Objetivo:</strong> transformar uma foto solta em um post 1080 × 1080 pronto para o feed.</p>
+              <p><strong>🖼️ Imagens:</strong> <a href="https://www.pexels.com/search/reusable%20water%20bottle/" target="_blank" rel="noopener noreferrer">Pexels — buscar garrafas ↗</a> · <a href="https://www.pexels.com/photo/a-transparent-reusable-water-bottle-18381807/" target="_blank" rel="noopener noreferrer">Pexels — foto pronta ↗</a> · <a href="https://pixabay.com/images/search/reusable%20water%20bottle/" target="_blank" rel="noopener noreferrer">Pixabay — alternativa ↗</a></p>
+              <div id="steps01"><ol class="gimp-steps"><li><code>File &gt; Open</code> — abra a imagem baixada.</li><li><code>Image &gt; Canvas Size</code> — defina 1080 × 1080 px e marque “Resize layers: All layers”.</li><li>Use <code>Crop Tool</code> (tecla <code>Shift+C</code>) para reenquadrar o produto centralizado.</li><li>Use <code>Image &gt; Flatten Image</code>.</li><li>Use <code>File &gt; Export As</code> e salve como <code>post-01.png</code>.</li></ol></div>
+              <button class="btn btn-orange" data-copy-target="steps01">📋 Copiar passo a passo</button>
+            </div></div>
+          </article>
+          <article class="accordion-item">
+            <h3 class="accordion-header" id="heading02"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge02" aria-expanded="false" aria-controls="challenge02"><span><span class="level-badge level-beginner">🟢 Iniciante</span><strong>Desafio 2 — Redimensionar para múltiplos formatos</strong></span></button></h3>
+            <div id="challenge02" class="accordion-collapse collapse" aria-labelledby="heading02" data-bs-parent="#accordionBeginner"><div class="accordion-body">
+              <p><strong>🎯 Objetivo:</strong> entender que feed, Stories e marketplace pedem tamanhos diferentes.</p>
+              <p><strong>🖼️ Imagem:</strong> use a mesma do Desafio 1 ou veja <a href="https://www.pexels.com/search/product%20photography/" target="_blank" rel="noopener noreferrer">mais opções no Pexels ↗</a>.</p>
+              <div id="steps02"><ol class="gimp-steps"><li>Use <code>Image &gt; Duplicate</code> para criar três cópias de trabalho.</li><li>Em cada cópia, use <code>Image &gt; Scale Image</code>: 1080 × 1080 (feed), 1080 × 1920 (Stories) e 1600 × 1600 (marketplace).</li><li>Use <code>File &gt; Export As</code> em PNG para cada tamanho, nomeando <code>post-feed.png</code>, <code>post-story.png</code> e <code>post-marketplace.png</code>.</li></ol></div>
+              <button class="btn btn-orange" data-copy-target="steps02">📋 Copiar passo a passo</button>
+            </div></div>
+          </article>
+          <article class="accordion-item">
+            <h3 class="accordion-header" id="heading03"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge03" aria-expanded="false" aria-controls="challenge03"><span><span class="level-badge level-beginner">🟢 Iniciante</span><strong>Desafio 3 — Adicionar texto de oferta com fonte da marca</strong></span></button></h3>
+            <div id="challenge03" class="accordion-collapse collapse" aria-labelledby="heading03" data-bs-parent="#accordionBeginner"><div class="accordion-body">
+              <p><strong>🎯 Objetivo:</strong> criar o primeiro post pronto, com uma chamada de oferta.</p><p><strong>🖼️ Imagem:</strong> produto usado no Desafio 1.</p>
+              <div id="steps03"><ol class="gimp-steps"><li>Selecione <code>Text Tool</code> (tecla <code>T</code>) e clique na imagem.</li><li>Escolha <strong>Bebas Neue</strong>, tamanho aproximado de 90 px e uma cor da paleta.</li><li>Digite “OFERTA DA SEMANA” ou “20% OFF”.</li><li>Use <code>Tools &gt; Transform Tools &gt; Align</code> para centralizar o texto.</li><li>Adicione outra camada de texto, menor e em <strong>Poppins</strong>, com “Compre no site 🌐”.</li><li>Use <code>File &gt; Export As</code> e salve como <code>post-03.png</code>.</li></ol></div>
+              <button class="btn btn-orange" data-copy-target="steps03">📋 Copiar passo a passo</button>
+            </div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nível intermediário: desafios 4 a 7 -->
+    <section class="section level-section" id="intermediario" aria-labelledby="intermediario-title"><div class="container">
+      <div class="section-heading"><span class="level-badge level-intermediate">🟡 Intermediário</span><h2 id="intermediario-title">✂️ Correção, recorte e composição — Desafios 4 a 7</h2><p>Agora você corrige a fotografia, isola o produto, cria uma cena lifestyle e acrescenta o convite para a loja.</p></div>
+      <div class="accordion gimp-accordion" id="accordionIntermediate">
+        <article class="accordion-item"><h3 class="accordion-header" id="heading04"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#challenge04" aria-expanded="true" aria-controls="challenge04"><span><span class="level-badge level-intermediate">🟡 Intermediário</span><strong>Desafio 4 — Corrigir cor e luz da foto</strong></span></button></h3><div id="challenge04" class="accordion-collapse collapse show" aria-labelledby="heading04" data-bs-parent="#accordionIntermediate"><div class="accordion-body">
+          <p><strong>🎯 Objetivo:</strong> deixar a foto com aspecto mais profissional antes de postar.</p><p><strong>🖼️ Imagens:</strong> <a href="https://www.pexels.com/search/flat%20lay/" target="_blank" rel="noopener noreferrer">Pexels — flat lay ↗</a> · <a href="https://pixabay.com/images/search/product%20background/" target="_blank" rel="noopener noreferrer">Pixabay — alternativa ↗</a>.</p>
+          <div id="steps04"><ol class="gimp-steps"><li>Use <code>Colors &gt; Levels</code> e ajuste os pontos de preto e branco para melhorar o contraste.</li><li>Use <code>Colors &gt; Curves</code> e suavize a curva para dar mais “pop”.</li><li>Em <code>Colors &gt; Hue-Saturation</code>, aumente levemente a saturação (+10 a +15), sem exagerar.</li><li>Use <code>Colors &gt; Brightness-Contrast</code> para o ajuste fino, se necessário.</li><li>Exporte e compare o antes e o depois.</li></ol></div><button class="btn btn-orange" data-copy-target="steps04">📋 Copiar passo a passo</button>
+        </div></div></article>
+        <article class="accordion-item"><h3 class="accordion-header" id="heading05"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge05" aria-expanded="false" aria-controls="challenge05"><span><span class="level-badge level-intermediate">🟡 Intermediário</span><strong>Desafio 5 — Remover o fundo de uma foto de produto</strong></span></button></h3><div id="challenge05" class="accordion-collapse collapse" aria-labelledby="heading05" data-bs-parent="#accordionIntermediate"><div class="accordion-body">
+          <p><strong>🎯 Objetivo:</strong> deixar o produto isolado e pronto para qualquer fundo.</p><p><strong>🖼️ Imagens:</strong> <a href="https://www.pexels.com/photo/person-holding-white-tote-bag-4068314/" target="_blank" rel="noopener noreferrer">Pexels — foto 1 ↗</a> · <a href="https://www.pexels.com/photo/a-person-holding-a-tote-bag-6787035/" target="_blank" rel="noopener noreferrer">Pexels — foto 2 ↗</a> · <a href="https://pixabay.com/images/search/eco%20product/" target="_blank" rel="noopener noreferrer">Pixabay — alternativa ↗</a>.</p>
+          <div id="steps05"><ol class="gimp-steps"><li>Use <code>Fuzzy Select</code> (tecla <code>U</code>) e clique no fundo.</li><li>Se o fundo não for uniforme, use <code>Select &gt; By Color</code>.</li><li>Use <code>Select &gt; Grow</code> (2–3 px) para incluir as bordas e <code>Select &gt; Feather</code> (1–2 px) para suavizá-las.</li><li>Use <code>Select &gt; Invert</code>; agora o produto está selecionado.</li><li>Use <code>Layer &gt; Mask &gt; Add Layer Mask &gt; Selection</code>.</li><li>Use <code>File &gt; Export As</code> e salve como <code>produto-sem-fundo.png</code>, mantendo a transparência.</li></ol></div><button class="btn btn-orange" data-copy-target="steps05">📋 Copiar passo a passo</button>
+        </div></div></article>
+        <article class="accordion-item"><h3 class="accordion-header" id="heading06"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge06" aria-expanded="false" aria-controls="challenge06"><span><span class="level-badge level-intermediate">🟡 Intermediário</span><strong>Desafio 6 — Compor produto + novo cenário lifestyle</strong></span></button></h3><div id="challenge06" class="accordion-collapse collapse" aria-labelledby="heading06" data-bs-parent="#accordionIntermediate"><div class="accordion-body">
+          <p><strong>🎯 Objetivo:</strong> colocar o produto recortado em uma situação real de uso.</p><p><strong>🖼️ Imagens:</strong> produto do Desafio 5 + <a href="https://www.pexels.com/search/lifestyle%20background/" target="_blank" rel="noopener noreferrer">fundo lifestyle ↗</a> ou <a href="https://www.pexels.com/search/outdoor%20lifestyle%20photography/" target="_blank" rel="noopener noreferrer">fundo outdoor ↗</a>.</p>
+          <div id="steps06"><ol class="gimp-steps"><li>Use <code>File &gt; Open as Layers</code> e abra o fundo lifestyle primeiro.</li><li>Use <code>File &gt; Open as Layers</code> novamente e adicione o produto sem fundo por cima.</li><li>Use <code>Move Tool</code> (<code>M</code>) e <code>Scale Tool</code> (<code>Shift+T</code>) para posicionar e ajustar o produto.</li><li>Aplique <code>Filters &gt; Light and Shadow &gt; Drop Shadow</code> no produto para integrá-lo à cena.</li><li>Se as cores não combinarem, use <code>Colors &gt; Curves</code> somente na camada do produto.</li><li>Use <code>Image &gt; Flatten Image</code> e exporte.</li></ol></div><button class="btn btn-orange" data-copy-target="steps06">📋 Copiar passo a passo</button>
+        </div></div></article>
+        <article class="accordion-item"><h3 class="accordion-header" id="heading07"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge07" aria-expanded="false" aria-controls="challenge07"><span><span class="level-badge level-intermediate">🟡 Intermediário</span><strong>Desafio 7 — Adicionar botão de call-to-action e link</strong></span></button></h3><div id="challenge07" class="accordion-collapse collapse" aria-labelledby="heading07" data-bs-parent="#accordionIntermediate"><div class="accordion-body">
+          <p><strong>🎯 Objetivo:</strong> fazer o post convidar claramente o público para acessar a loja virtual.</p><p><strong>🖼️ Imagem:</strong> composição produzida no Desafio 6.</p>
+          <div id="steps07"><ol class="gimp-steps"><li>Use <code>Tools &gt; Selection Tools &gt; Rectangle Select</code> e desenhe o botão.</li><li>Use <code>Select &gt; Rounded Rectangle</code> e defina o raio dos cantos, por exemplo 20 px.</li><li>Preencha com <code>Edit &gt; Fill with FG Color</code>, usando a cor de destaque da marca.</li><li>Com <code>Text Tool</code> e <strong>Montserrat Bold</strong>, escreva “Acesse o site 🔗”.</li><li>Opcional: gere um QR code em um serviço gratuito, importe-o com <code>File &gt; Open as Layers</code> e posicione-o no canto.</li><li>Exporte como <code>post-cta-07.png</code>.</li></ol></div><button class="btn btn-orange" data-copy-target="steps07">📋 Copiar passo a passo</button>
+        </div></div></article>
+      </div>
+    </div></section>
+
+    <!-- Nível profissional: desafios 8 a 10 -->
+    <section class="section section-soft level-section" id="profissional" aria-labelledby="profissional-title"><div class="container">
+      <div class="section-heading"><span class="level-badge level-professional">🔴 Profissional</span><h2 id="profissional-title">🚀 Escala e efeitos avançados — Desafios 8 a 10</h2><p>Crie um sistema visual reutilizável, aplique acabamento avançado e conheça a automação em lote.</p></div>
+      <div class="accordion gimp-accordion" id="accordionProfessional">
+        <article class="accordion-item"><h3 class="accordion-header" id="heading08"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#challenge08" aria-expanded="true" aria-controls="challenge08"><span><span class="level-badge level-professional">🔴 Profissional</span><strong>Desafio 8 — Carrossel de 4 posts com identidade consistente</strong></span></button></h3><div id="challenge08" class="accordion-collapse collapse show" aria-labelledby="heading08" data-bs-parent="#accordionProfessional"><div class="accordion-body">
+          <p><strong>🎯 Objetivo:</strong> criar um carrossel para Instagram mantendo o mesmo padrão visual entre os slides.</p><p><strong>🖼️ Imagens:</strong> quatro fotos relacionadas em <a href="https://www.pexels.com/search/sustainable/" target="_blank" rel="noopener noreferrer">Pexels — sustentável ↗</a>, <a href="https://www.pexels.com/search/eco%20friendly%20products/" target="_blank" rel="noopener noreferrer">Pexels — eco friendly products ↗</a> ou <a href="https://pixabay.com/images/search/eco%20product/" target="_blank" rel="noopener noreferrer">Pixabay — alternativa ↗</a>.</p>
+          <div id="steps08"><ol class="gimp-steps"><li>Crie um modelo com <code>File &gt; New</code>, em 1080 × 1350 px, e deixe texto, logotipo e CTA posicionados.</li><li>Use <code>File &gt; Export As Template</code> ou salve um modelo <code>.xcf</code> para reutilizar.</li><li>Em cada slide, use <code>File &gt; Open as Layers</code> apenas para a foto daquele produto, mantendo texto e CTA fixos.</li><li>Use <code>Windows &gt; Dockable Dialogs &gt; Layers</code> para organizar e renomear camadas.</li><li>Exporte como <code>carrossel-01.png</code> até <code>carrossel-04.png</code>.</li></ol></div><button class="btn btn-orange" data-copy-target="steps08">📋 Copiar passo a passo</button>
+        </div></div></article>
+        <article class="accordion-item"><h3 class="accordion-header" id="heading09"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge09" aria-expanded="false" aria-controls="challenge09"><span><span class="level-badge level-professional">🔴 Profissional</span><strong>Desafio 9 — Blend modes e gradiente de marca</strong></span></button></h3><div id="challenge09" class="accordion-collapse collapse" aria-labelledby="heading09" data-bs-parent="#accordionProfessional"><div class="accordion-body">
+          <p><strong>🎯 Objetivo:</strong> dar acabamento premium com modos de mesclagem e sobreposição de cor.</p><p><strong>🖼️ Imagem:</strong> composição de qualquer desafio anterior.</p>
+          <div id="steps09"><ol class="gimp-steps"><li>Crie uma camada sólida da marca com <code>Layer &gt; New Layer &gt; Fill with: Foreground color</code>.</li><li>No painel <code>Layers</code>, altere o <strong>Mode</strong> para <code>Multiply</code>, <code>Screen</code> ou <code>Overlay</code> e ajuste a <strong>Opacity</strong>.</li><li>Use <code>Colors &gt; Map &gt; Gradient Map</code> para unificar a paleta da composição.</li><li>Aplique <code>Filters &gt; Blur &gt; Gaussian Blur</code> levemente no fundo para dar profundidade.</li><li>Use <code>Filters &gt; Light and Shadow &gt; Vignette</code> para um acabamento de estúdio.</li><li>Exporte e compare com o Desafio 6, observando o ganho de qualidade percebida.</li></ol></div><button class="btn btn-orange" data-copy-target="steps09">📋 Copiar passo a passo</button>
+        </div></div></article>
+        <article class="accordion-item"><h3 class="accordion-header" id="heading10"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge10" aria-expanded="false" aria-controls="challenge10"><span><span class="level-badge level-professional">🔴 Profissional</span><strong>Desafio 10 — Automatizar exportação em lote com Script-Fu</strong></span></button></h3><div id="challenge10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionProfessional"><div class="accordion-body">
+          <p><strong>🎯 Objetivo:</strong> preparar várias fotos do catálogo nos tamanhos padrão de uma vez, como em uma produção real de e-commerce.</p><p><strong>🖼️ Imagens:</strong> baixe cinco ou mais fotos em <a href="https://www.pexels.com/search/product/" target="_blank" rel="noopener noreferrer">Pexels — produtos ↗</a> ou <a href="https://pixabay.com/images/search/product%20background/" target="_blank" rel="noopener noreferrer">Pixabay — alternativa ↗</a>.</p>
+          <div id="steps10"><ol class="gimp-steps"><li>Abra <code>Filters &gt; Script-Fu &gt; Console</code>.</li><li>Cole o script abaixo para redimensionar e exportar as imagens para 1080 × 1080.</li></ol><pre class="code-block" aria-label="Código Script-Fu do desafio 10"><code>(let* ((files (cadr (gimp-file-glob "/caminho/da/pasta/*.jpg" 0))))
+  (while (pair? files)
+    (let* ((image (car (gimp-file-load RUN-NONINTERACTIVE (car files) (car files)))))
+      (gimp-image-scale image 1080 1080)
+      (gimp-image-flatten image)
+      (file-png-save RUN-NONINTERACTIVE image (car (gimp-image-get-active-drawable image))
+        (string-append (car files) "-1080.png") "1080" 0 9 1 1 1 1 1))
+    (set! files (cdr files))))</code></pre><ol class="gimp-steps" start="3"><li>Troque <code>/caminho/da/pasta/</code> pelo caminho correto no seu computador.</li><li>Execute o script e confira os arquivos exportados automaticamente.</li><li>Reflita: estúdios de e-commerce usam automações assim para publicar catálogos inteiros com rapidez.</li></ol></div><button class="btn btn-orange" data-copy-target="steps10">📋 Copiar passo a passo</button>
+        </div></div></article>
+      </div>
+    </div></section>
+
+    <!-- Checklist persistente -->
+    <section class="section" id="entrega" aria-labelledby="entrega-title"><div class="container">
+      <div class="section-heading"><span class="eyebrow">✅ Revisão final</span><h2 id="entrega-title">Checklist geral de entrega</h2><p>Marque cada item ao revisar seu trabalho. O progresso fica salvo neste navegador. <strong data-progress-count>0 de 7 concluídos</strong>.</p></div>
+      <div class="content-card checklist-card"><ul class="progress-checklist">
+        <li><input class="form-check-input" type="checkbox" id="gimp-check-1" data-progress-check><label for="gimp-check-1">📐 Post no tamanho certo para o canal: feed 1080 × 1080 ou Stories 1080 × 1920.</label></li>
+        <li><input class="form-check-input" type="checkbox" id="gimp-check-2" data-progress-check><label for="gimp-check-2">🔤 Fonte da marca aplicada de forma consistente.</label></li>
+        <li><input class="form-check-input" type="checkbox" id="gimp-check-3" data-progress-check><label for="gimp-check-3">🎨 Cor de destaque da paleta usada no CTA.</label></li>
+        <li><input class="form-check-input" type="checkbox" id="gimp-check-4" data-progress-check><label for="gimp-check-4">👀 Texto curto e legível, sem grandes blocos dentro da imagem.</label></li>
+        <li><input class="form-check-input" type="checkbox" id="gimp-check-5" data-progress-check><label for="gimp-check-5">🔗 Chamada clara para o site: texto, botão ou QR code.</label></li>
+        <li><input class="form-check-input" type="checkbox" id="gimp-check-6" data-progress-check><label for="gimp-check-6">🗂️ Arquivo exportado em PNG, se precisar de transparência, ou JPEG, para menor peso.</label></li>
+        <li><input class="form-check-input" type="checkbox" id="gimp-check-7" data-progress-check><label for="gimp-check-7">✍️ Crédito da imagem original anotado, mesmo quando não for obrigatório.</label></li>
+      </ul></div>
+    </div></section>
+
+    <section class="section section-soft"><div class="container"><div class="callout p-4 p-md-5"><div class="row align-items-center g-4"><div class="col-lg-7"><h2 class="fw-bold">🌐 Termine com um convite para a loja</h2><p class="mb-0">O post final deve levar o público ao site da loja fictícia. Retome os modelos de prompt e os desafios do projeto para alinhar a peça à campanha.</p></div><div class="col-lg-5 d-flex flex-wrap gap-2 justify-content-lg-end"><a class="btn btn-orange" href="prompts.html">💬 Ver prompts</a><a class="btn btn-outline-light" href="desafios.html">🏆 Ver desafios</a></div></div></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container d-md-flex justify-content-between gap-3"><p class="mb-2 mb-md-0"><strong>🪄 IA no E-commerce</strong> — material educativo para o Projeto Integrador.</p><p class="mb-0">Crie, teste, revise e publique com responsabilidade.</p></div></footer>
+  <div class="toast-copy" role="status" aria-live="polite" data-copy-toast></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="script.js"></script>
+</body>
+</html>
