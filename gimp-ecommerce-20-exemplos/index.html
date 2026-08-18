@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Curso independente com 20 exemplos práticos de GIMP aplicados ao e-commerce.">
+  <title>GIMP para E-commerce | 20 exemplos práticos</title>
+  <script>document.documentElement.dataset.theme=localStorage.getItem('gimp20-theme')||'light';</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Navegação exclusivamente interna: este projeto não aponta para o hotsite original. -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav" aria-label="Navegação do tutorial">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio"><span class="brand-mark">🖌️</span> GIMP para E-commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#basico">🟢 Básico</a></li>
+          <li class="nav-item"><a class="nav-link" href="#intermediario">🟡 Intermediário</a></li>
+          <li class="nav-item"><a class="nav-link" href="#avancado">🔴 Avançado</a></li>
+          <li class="nav-item"><a class="nav-link" href="#checklist">✅ Checklist</a></li>
+        </ul>
+        <button class="theme-toggle ms-lg-3" type="button" data-theme-toggle aria-label="Ativar tema escuro">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="conteudo">
+    <header class="hero" id="inicio">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow">🎓 Guia independente · GIMP 3 em inglês</span>
+            <h1>20 exemplos de GIMP para imagens de e-commerce</h1>
+            <p class="lead">Aprenda fazendo: cada exemplo apresenta uma aplicação real, uma imagem de referência e um passo a passo separado — do primeiro recorte à produção de catálogo em escala.</p>
+            <div class="d-flex flex-wrap gap-2 mt-4"><a class="btn btn-orange btn-lg" href="#basico">Começar pelo básico</a><a class="btn btn-outline-light btn-lg" href="#como-usar">Como usar o guia</a><a class="btn btn-light btn-lg" href="assets/imagens-atividades-gimp.zip" download>⬇️ Baixar as 20 imagens</a></div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block"><div class="hero-preview" role="img" aria-label="Montagem com produtos genéricos representando diferentes edições de e-commerce"></div></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="como-usar" aria-labelledby="como-usar-title">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">🧭 Antes de começar</span><h2 id="como-usar-title">Como usar este guia</h2><p>Abra um exemplo por vez, use uma cópia da imagem original e salve o arquivo editável antes de exportar.</p></div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3"><article class="info-card"><span>📁</span><h3>1. Organize</h3><p>As imagens-base estão em <code>assets/atividades/</code>. Copie-as para uma pasta de trabalho antes de editar.</p></article></div>
+          <div class="col-md-6 col-xl-3"><article class="info-card"><span>🧪</span><h3>2. Pratique</h3><p>Abra o accordion, siga os passos e compare o resultado com o objetivo.</p></article></div>
+          <div class="col-md-6 col-xl-3"><article class="info-card"><span>💾</span><h3>3. Salve</h3><p>Use <code>File &gt; Save As</code> para manter camadas no arquivo <code>.xcf</code>.</p></article></div>
+          <div class="col-md-6 col-xl-3"><article class="info-card"><span>✅</span><h3>4. Registre</h3><p>Marque o exemplo concluído; o progresso fica salvo no navegador.</p></article></div>
+        </div>
+        <div class="notice mt-4"><strong>⚠️ Trabalhe com cópias:</strong> nunca edite o arquivo-base diretamente. As imagens deste material são produtos fictícios gerados para estudo; em um projeto real, cores, rótulos e proporções devem continuar fiéis ao item vendido.</div>
+      </div>
+    </section>
+
+    <section class="tools-section" aria-label="Ferramentas de busca e acompanhamento">
+      <div class="container">
+        <div class="tools-panel">
+          <div class="row g-3 align-items-end">
+            <div class="col-lg-7"><label class="form-label fw-bold" for="exampleSearch">🔍 Buscar exemplo</label><input class="form-control" id="exampleSearch" type="search" placeholder="Ex.: fundo, banner, cor, WebP..." data-search></div>
+            <div class="col-sm-7 col-lg-3"><label class="form-label fw-bold" for="levelFilter">🎚️ Filtrar por nível</label><select class="form-select" id="levelFilter" data-level-filter><option value="all">Todos os níveis</option><option value="basico">🟢 Básico</option><option value="intermediario">🟡 Intermediário</option><option value="avancado">🔴 Avançado</option></select></div>
+            <div class="col-sm-5 col-lg-2"><div class="progress-box"><strong data-progress-count>0/20</strong><small>concluídos</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Os 20 exemplos são renderizados a partir de dados locais em script.js. -->
+    <div id="examplesRoot" data-examples-root></div>
+    <div class="container"><div class="empty-state" data-empty-state hidden><strong>🔎 Nenhum exemplo encontrado.</strong><p class="mb-0">Tente outro termo ou selecione todos os níveis.</p></div></div>
+
+    <section class="section" id="checklist" aria-labelledby="checklist-title">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">✅ Antes de publicar</span><h2 id="checklist-title">Checklist de qualidade para e-commerce</h2><p>Use esta lista depois de qualquer exercício.</p></div>
+        <div class="checklist-card"><ul>
+          <li>🎯 O produto continua fiel à cor, forma, acabamento e quantidade reais?</li>
+          <li>📐 A proporção corresponde ao canal em que a imagem será publicada?</li>
+          <li>👀 Textos, preço e CTA continuam legíveis no celular?</li>
+          <li>🧹 Não há halos, recortes duros, manchas ou repetições artificiais?</li>
+          <li>⚡ O arquivo foi exportado com qualidade adequada e peso controlado?</li>
+          <li>📝 O nome do arquivo é descritivo, sem espaços ou acentos?</li>
+          <li>💾 O arquivo <code>.xcf</code> com camadas foi guardado para futuras alterações?</li>
+        </ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container d-md-flex justify-content-between gap-3"><p class="mb-2 mb-md-0"><strong>🖌️ GIMP para E-commerce</strong> — prática independente em 20 exemplos.</p><p class="mb-0">Edite com cuidado, revise com critério.</p></div></footer>
+  <div class="copy-toast" role="status" aria-live="polite" data-copy-toast></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
